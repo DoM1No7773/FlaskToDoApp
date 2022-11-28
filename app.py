@@ -12,6 +12,9 @@ class Todo(db.Model):
     title = db.Column(db.String(50),nullable=False)
     content = db.Column(db.String(200),nullable=False)
 
+with app.app_context():
+    db.create_all()
+
 @app.route("/",methods=['POST','GET'])
 def index():
     if request.method == 'POST':
@@ -49,5 +52,5 @@ def update(id):
         return render_template('update.html',todo=todo)
 
 if __name__ == "__main__":
-    db.create_all()
     app.run(debug=True)
+
