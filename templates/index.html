@@ -1,10 +1,13 @@
 {% extends 'base.html'%}
 
 {% block head%}
-<title>index</title>
+<title>ToDo View</title>
 {% endblock%}
 
 {% block body %}
+
+    <h4 style="text-align: center;">ToDo View</h4>
+
     <form action="/" method="POST">
         <ul class="nav justify-content-center">
             <li class="nav-item" style="margin: 0.3rem;">
@@ -32,7 +35,7 @@
               <p class="card-text">{{ todo.content}}</p>
 
               <div style="display: flex; justify-content:flex-end;">
-                <a href="#" style="margin: 0.2rem;"class="btn btn-primary">Update</a>
+                <a href="/update/{{ todo.id}}" style="margin: 0.2rem;"class="btn btn-primary">Update</a>
                 <a href="/delete/{{ todo.id }}" style="margin: 0.2rem;"class="btn btn-danger">Delete</a>
               </div>
             </div>

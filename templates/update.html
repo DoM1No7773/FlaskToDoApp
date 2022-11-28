@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block head%}
+<title>index</title>
+{% endblock%}
+
+{% block body %}
+    <h4 style="text-align: center;">Update ToDo</h4>
+
+    <form action="/update/{{ todo.id }}" method="POST">
+        <ul class="nav justify-content-center">
+            <li class="nav-item" style="margin: 0.3rem;">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="taskTitle" name="taskTitle" 
+                     value = "{{ todo.title }}" placeholder="task title">
+                </div>
+            </li>
+            <li class="nav-item" style="margin: 0.3rem;">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="taskContent" name="taskContent" 
+                    value = "{{ todo.content}}" placeholder="task content">
+                </div>
+            </li>
+            <li class="nav-item" style="margin: 0.3rem;">
+                <button type="submit" class="btn btn-success">Update</button>
+            </li>
+        </ul>
+    </form>
+
+
+{% endblock%}

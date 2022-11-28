@@ -31,5 +31,23 @@ def delete(id):
     db.session.commit()
     return redirect('/')
 
+
+@app.route("/update/<int:id>",methods=['POST','GET'])
+def update(id):
+    todo = Todo.query.get_or_404(id)
+
+    
+
+    if request.method == 'POST':
+        
+        todo.title = request.form['taskTitle']
+        todo.content = request.form['taskContent']
+        
+        db.session.commit()
+        return redirect('/')
+    else:
+        return render_template('update.html',todo=todo)
+
 if __name__ == "__main__":
+    db.create_all()
     app.run(debug=True)
