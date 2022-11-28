@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{% block head%}
+<title>index</title>
+{% endblock%}
+
+{% block body %}
+    <form action="/" method="POST">
+        <ul class="nav justify-content-center">
+            <li class="nav-item" style="margin: 0.3rem;">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="taskTitle" name="taskTitle" placeholder="task title">
+                </div>
+            </li>
+            <li class="nav-item" style="margin: 0.3rem;">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="taskContent" name="taskContent" placeholder="task content">
+                </div>
+            </li>
+            <li class="nav-item" style="margin: 0.3rem;">
+                <button type="submit" class="btn btn-success">Add New Task</button>
+            </li>
+        </ul>
+    </form>
+
+
+    <div class="container">
+        {% for todo in todos%}
+        <div class="card" style="width: 100%;margin: 0.3rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ todo.title}}</h5>
+              <p class="card-text">{{ todo.content}}</p>
+
+              <div style="display: flex; justify-content:flex-end;">
+                <a href="#" style="margin: 0.2rem;"class="btn btn-primary">Update</a>
+                <a href="/delete/{{ todo.id }}" style="margin: 0.2rem;"class="btn btn-danger">Delete</a>
+              </div>
+            </div>
+          </div>
+        {% endfor%}
+    </div>
+
+{% endblock%}
