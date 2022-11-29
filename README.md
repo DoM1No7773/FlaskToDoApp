@@ -20,13 +20,13 @@ build a docker image:
 docker build -t <image name>
 ```
 
-and run a docker image:
+and run a application:
 
 ```bash
 docker run -it -p 5000:5000 -d <image name>
 ```
 
-Now open browser type localhost:5000 and check if a website is working.
+open a browser , type localhost:5000 and check if it's working.
 
 
 
