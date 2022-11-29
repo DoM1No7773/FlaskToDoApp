@@ -2,7 +2,7 @@
 
 ## How to download?
 
-download as a zip or type in terminal:
+Download as a ZIP, or clone repository:
 
 ```bash
 git clone https://github.com/DoM1No7773/FlaskToDoApp.git
@@ -11,22 +11,22 @@ git clone https://github.com/DoM1No7773/FlaskToDoApp.git
 ## How to run?
 
 
-download and install [docker-engine](https://docs.docker.com/engine/install/linux-postinstall/) 
+Download and install [docker-engine](https://docs.docker.com/engine/install/) 
 
 
-build a docker image:
+Build a docker image:
 
 ```bash
 docker build -t <image name>
 ```
 
-and run a application:
+Run a application:
 
 ```bash
 docker run -it -p 5000:5000 -d <image name>
 ```
 
-open a browser , type localhost:5000 and check if it's working.
+Open a browser , type localhost:5000 and check if it's working.
 
 
 
