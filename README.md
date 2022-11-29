@@ -28,7 +28,7 @@ and run a docker image:
 docker run -it -p 5000:5000 -d <image name>
 ```
 
-Now open browser and type :[localhost:5000](localhost:5000) and heck if a website is working.
+Now open browser type localhost:5000 and check if a website is working.
 
 
 
