@@ -20,7 +20,7 @@ Build a docker image:
 docker build -t <image name>
 ```
 
-Run a application:
+Run the application:
 
 ```bash
 docker run -it -p 5000:5000 -d <image name>
