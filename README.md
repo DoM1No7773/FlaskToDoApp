@@ -26,7 +26,7 @@ Run a application:
 docker run -it -p 5000:5000 -d <image name>
 ```
 
-Open a browser , type localhost:5000 and check if it's working.
+Open a browser, type localhost:5000 and check if it's working.
 
 
 
