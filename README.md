@@ -2,7 +2,7 @@
 
 ## How to download?
 
-u can download as a zip or type in terminal:
+download as a zip or type in terminal:
 
 ```bash
 git clone https://github.com/DoM1No7773/FlaskToDoApp.git
@@ -10,11 +10,9 @@ git clone https://github.com/DoM1No7773/FlaskToDoApp.git
 
 ## How to run?
 
-### 1 step
 
 download and install [docker-engine](https://docs.docker.com/engine/install/linux-postinstall/) 
 
-### 2 step 
 
 build a docker image:
 
