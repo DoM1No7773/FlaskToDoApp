@@ -17,7 +17,7 @@ Download and install [docker-engine](https://docs.docker.com/engine/install/)
 Build a docker image:
 
 ```bash
-docker build -t <image name>
+docker build -t <image name> .
 ```
 
 Run the application:
